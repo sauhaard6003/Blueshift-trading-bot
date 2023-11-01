@@ -1,10 +1,10 @@
 """
-    Title: Bollinger Band Strategy (NSE)
+    Title: Bollinger Band Strategy (BTC)
     Description: This is a long short strategy based on bollinger bands
         and SMA dual signals
     Style tags: Systematic Fundamental
     Asset class: Equities, Futures, ETFs and Currencies
-    Dataset: NSE
+    Dataset: BTC
 """
 from blueshift.library.technicals.indicators import bollinger_band, ema, rsi
 
@@ -23,7 +23,7 @@ def initialize(context):
         A function to define things to do at the start of the strategy
     """
     # universe selection
-    context.securities = [symbol('NIFTY-I'),symbol('BANKNIFTY-I')]
+    context.securities = [symbol('BTC/USDT')]
 
     # define strategy parameters
     context.params = {'indicator_lookback':375,
