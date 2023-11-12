@@ -1,5 +1,5 @@
 """
-    Title: Bollinger Band Strategy (BTC)
+    Title: Bollinger Band Strategy (NSE)
     Description: This is a long short strategy based on bollinger bands
         and SMA dual signals
     Style tags: Systematic Fundamental
@@ -23,7 +23,7 @@ def initialize(context):
         A function to define things to do at the start of the strategy
     """
     # universe selection
-    context.securities = [symbol('NIFTY'), symbol('BANKNIFTY')]
+    context.securities = [symbol('NIFTY-I'), symbol('BANKNIFTY-I')]
 
     # define strategy parameters
     context.params = {'indicator_lookback':375,
