@@ -4,7 +4,7 @@
         and SMA dual signals
     Style tags: Systematic Fundamental
     Asset class: Equities, Futures, ETFs and Currencies
-    Dataset: BTC
+    Dataset: NSE
 """
 from blueshift.library.technicals.indicators import bollinger_band, ema, rsi
 
@@ -23,7 +23,7 @@ def initialize(context):
         A function to define things to do at the start of the strategy
     """
     # universe selection
-    context.securities = [symbol('BTC/USDT')]
+    context.securities = [symbol('NIFTY'), symbol('BANKNIFTY')]
 
     # define strategy parameters
     context.params = {'indicator_lookback':375,
